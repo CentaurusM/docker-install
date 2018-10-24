@@ -79,7 +79,7 @@ armv7l-ubuntu-bionic
 armv7l-ubuntu-artful
 "
 
-mirror=''
+mirror='HuaweiCloud'
 DRY_RUN=${DRY_RUN:-}
 while [ $# -gt 0 ]; do
 	case "$1" in
@@ -98,6 +98,9 @@ while [ $# -gt 0 ]; do
 done
 
 case "$mirror" in
+	HuaweiCloud)
+		DOWNLOAD_URL="https://mirrors.aliyun.com/docker-ce"
+		;;
 	Aliyun)
 		DOWNLOAD_URL="https://mirrors.aliyun.com/docker-ce"
 		;;
